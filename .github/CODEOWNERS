@@ -1,11 +1,18 @@
-# Founder retains final review authority across the repository.
+# IMPORTANT
+# Leo Shaposhnikov is the project owner and executive principal.
+# His GitHub identity is not yet recorded, so this file cannot yet enforce his review rights.
+# @serg-alexv is the repository host, Founding CTO, and technical CODEOWNER—not the project owner by virtue of this file.
+
 * @serg-alexv
 
-# High-risk control surfaces
+# High-risk technical control surfaces
 /GOVERNANCE.md @serg-alexv
+/OWNERSHIP.md @serg-alexv
 /CLAIMS.md @serg-alexv
 /STATUS.md @serg-alexv
 /architecture/ @serg-alexv
 /schemas/ @serg-alexv
 /decisions/ @serg-alexv
 /.github/ @serg-alexv
+
+# Add Leo's verified GitHub handle to Class D and governance paths once supplied.
