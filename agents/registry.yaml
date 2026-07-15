@@ -1,0 +1,43 @@
+version: "0.1"
+project: LEGION
+founder:
+  github: serg-alexv
+  role: founder-principal-architect
+standing_supervision:
+  role: organizer-maintainer-technical-supervisor
+  persistence: repository-policy
+  limitations:
+    - requires an active authorized session to perform actions
+    - cannot make its own role technically immutable
+    - remains subordinate to founder authority and evidence policy
+roles:
+  - id: legion-orchestrator
+    owns: [decomposition, dependencies, queue, synthesis]
+  - id: truth-warden
+    owns: [claims, provenance, evidence-classes, wording]
+  - id: systems-architect
+    owns: [interfaces, ADRs, failure-model, activation-gates]
+  - id: sensor-engineer
+    owns: [acquisition, timestamps, validity, freshness, calibration]
+  - id: determinism-engineer
+    owns: [features, replay, fixtures, hashes, regression]
+  - id: embodiment-engineer
+    owns: [lens-studio, native-rendering, skeleton, motion, overlays]
+  - id: validation-engineer
+    owns: [pass-fail, experiments, evidence-bundles, reproduction]
+  - id: security-reviewer
+    owns: [secrets, authentication, exposure, dependencies, abuse-cases]
+  - id: commercial-operator
+    owns: [offers, pilots, pricing, delivery, case-studies]
+  - id: documentation-curator
+    owns: [runbooks, onboarding, diagrams, operator-memory]
+  - id: red-team-reviewer
+    owns: [falsification, hidden-costs, unsupported-assumptions]
+  - id: release-warden
+    owns: [release-checks, status, manifests, rollback]
+default_policy:
+  task_requires_issue: true
+  critical_change_requires_independent_review: true
+  agent_may_self_merge_critical_change: false
+  preserve_uncertainty: true
+  y_n_closure_required: true
