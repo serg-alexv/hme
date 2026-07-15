@@ -1,0 +1,5 @@
+#pragma once
+
+#define IDR_DRAGON_CALM 101
+#define IDR_DRAGON_ATTUNE 102
+#define IDR_DRAGON_STORM 103

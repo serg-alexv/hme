@@ -1,0 +1,5 @@
+# start_sequence,end_sequence,strength_q16,variability_q16,novelty_q16,freshness_ms,valid,source_code
+0,179,57671,3932,2621,10,1,0
+180,359,47185,22282,31457,10,1,0
+360,539,27525,55049,57671,10,1,0
+540,719,0,0,0,999999,0,3

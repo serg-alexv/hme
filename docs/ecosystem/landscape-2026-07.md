@@ -1,6 +1,6 @@
 # World 2.0 Ecosystem and Competitive Landscape
 
-**Research snapshot:** 2026-07-16  
+**Research snapshot:** 2026-07-15
 **State:** first broad scan; requires continuous verification  
 **Decision rule:** similarity does not equal duplication; every comparison is mapped against the actual verified nucleus.
 
@@ -25,7 +25,7 @@ The nearest entities usually dominate only one to three of these layers. The str
 
 # 1. Nearest product and experience competitors
 
-| Target | Class | Priority | Why it matters | LEGION action |
+| Target | Class | Priority | Why it matters | WORLD 2.0 action |
 |---|---|---:|---|---|
 | [Niantic Spatial](https://nianticspatial.com/) | `DIRECT_COMPETITOR` / `POTENTIAL_PARTNER` | P0 | Real-world spatial intelligence, localization, reconstruction, semantics, and developer platform. Defines the largest adjacent narrative. | Track product/API direction, partner programs, and Peridot work. Compare our provenance-driven sensing against their vision/geospatial stack. |
 | [Peridot / Peridot Beyond](https://playperidot.com/) | `DIRECT_COMPETITOR` / `CREATIVE_PRECEDENT` | P0 | AR creature designed to inhabit and react to the real world; evolved toward embodied AI and Spectacles. Closest visible user-experience precedent. | Produce a feature-by-feature matrix: environment inputs, persistence, agency, sensing, embodiment, social layer, monetization, hardware dependency. |
@@ -59,7 +59,7 @@ This is **not yet a novelty claim**. It is a scoped observation from the current
 
 # 2. Wireless and ambient-sensing companies
 
-| Target | Class | Priority | Relevance | LEGION action |
+| Target | Class | Priority | Relevance | WORLD 2.0 action |
 |---|---|---:|---|---|
 | [Origin Wireless](https://www.originwirelessai.com/) / [ADT](https://www.adt.com/) | `ADJACENT_COMPETITOR` / `RESEARCH_PRECEDENT` | P0 | Commercial Wi-Fi sensing for motion, occupancy, security, and health. ADT reportedly acquired Origin in February 2026 for $170M. A 2025 experience paper reports deployment across millions of routers and smart bulbs. | Treat as primary commercial validation and scaling benchmark. Study false positives, hardware heterogeneity, edge processing, privacy, and licensing. |
 | [WiZ SpaceSense](https://www.wizconnected.com/en-us/explore-wiz/spacesense) | `ADJACENT_COMPETITOR` / `PRODUCT_PRECEDENT` | P1 | Consumer Wi-Fi motion sensing built into lighting. | Study calibration UX and reliability failures. Distinguish motion inference from our current connected-link telemetry. |
@@ -131,7 +131,7 @@ The market already pays for “radio signals as sensors.” Our commercial disti
 
 ### Novelty discipline
 
-These works mean LEGION must never claim that it invented:
+These works mean WORLD 2.0 must never claim that it invented:
 
 - sensing people or environments through Wi-Fi/RF;
 - mapping CSI to activity or pose;
@@ -314,7 +314,7 @@ No listing here is a claim of eligibility.
 
 1. **Finish EXP-0001**: visible and recorded signal → state → dragon causal proof.
 2. **Build a Peridot Beyond comparison sheet** based on observable capabilities, not marketing language.
-3. **Fork or mirror Espressif `esp-csi` research references into a controlled LEGION evaluation issue** without starting hardware work yet.
+3. **Fork or mirror Espressif `esp-csi` research references into a controlled WORLD 2.0 evaluation issue** without starting hardware work yet.
 4. **Prepare an Epic MegaGrants Y/N decision before 2026-07-25**, leaving enough time before the September 4 deadline.
 5. **Create institution briefs for ZKM Hertz-Lab and Ars Electronica Futurelab** with one-page fit, contact path, and artifact required.
 6. **Record Origin/ADT as market validation** in commercial materials while explicitly distinguishing current WLAN telemetry from full Wi-Fi sensing.

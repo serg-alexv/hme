@@ -1,0 +1,26 @@
+{
+  "release": "world2-live-network-pets-windows/0.1.0",
+  "builtAt": "2026-07-16",
+  "platform": "windows-x64",
+  "artifact": {
+    "file": "dist/World2NetworkDragon.exe",
+    "bytes": 718336,
+    "sha256": "4f999368232fc318d7301ab229ce3eccf22e5b4e0ae380cb5dff5a92a9d9bccc"
+  },
+  "verified": [
+    "msvc-w4-wx-mt-build",
+    "live-getiftable2-frame-advance",
+    "live-load-attune-to-storm-transition",
+    "world-state-payload-sha256",
+    "pet-selector-rendering",
+    "replay-provenance-label"
+  ],
+  "notVerified": [
+    "lens-studio-runtime",
+    "macos-native-runtime",
+    "bsd-native-runtime",
+    "rf-spectrum",
+    "wlan-csi",
+    "room-location"
+  ]
+}

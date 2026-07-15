@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world2.local/schemas/world-state-0.1.schema.json",
+  "title": "WorldStateFrame 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol",
+    "schemaVersion",
+    "sequence",
+    "frameId",
+    "producer",
+    "provenance",
+    "observation",
+    "dynamics",
+    "state",
+    "embodiment",
+    "integrity"
+  ],
+  "properties": {
+    "protocol": { "const": "world.state" },
+    "schemaVersion": { "const": "0.1.0" },
+    "sequence": { "type": "integer", "minimum": 0 },
+    "frameId": { "type": "string", "minLength": 1 },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["engine", "implementation", "version"],
+      "properties": {
+        "engine": { "const": "WorldEngine" },
+        "implementation": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "sourceId", "observedAtMs", "emittedAtMs"],
+      "properties": {
+        "mode": { "enum": ["LIVE_NETWORK_COUNTERS", "BUNDLED_REPLAY"] },
+        "sourceId": { "type": "string" },
+        "observedAtMs": { "type": "integer", "minimum": 0 },
+        "emittedAtMs": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "metric",
+        "rawValue",
+        "rawUnit",
+        "rxBitPerSecond",
+        "txBitPerSecond",
+        "normalizedValuePpm",
+        "normalizationReference",
+        "sampleIntervalMs",
+        "ageMs",
+        "quality"
+      ],
+      "properties": {
+        "metric": { "const": "NETWORK_THROUGHPUT" },
+        "rawValue": { "type": "integer", "minimum": 0 },
+        "rawUnit": { "const": "bit_per_second" },
+        "rxBitPerSecond": { "type": "integer", "minimum": 0 },
+        "txBitPerSecond": { "type": "integer", "minimum": 0 },
+        "normalizedValuePpm": { "type": "integer", "minimum": 0, "maximum": 1000000 },
+        "normalizationReference": { "type": "integer", "minimum": 1 },
+        "sampleIntervalMs": { "type": "integer", "minimum": 1 },
+        "ageMs": { "type": "integer", "minimum": 0 },
+        "quality": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["valid", "counterReset", "intervalStable", "capacityDeclared"],
+          "properties": {
+            "valid": { "type": "boolean" },
+            "counterReset": { "type": "boolean" },
+            "intervalStable": { "type": "boolean" },
+            "capacityDeclared": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "dynamics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["changePpm", "variabilityPpm", "noveltyPpm"],
+      "properties": {
+        "changePpm": { "type": "integer", "minimum": 0, "maximum": 1000000 },
+        "variabilityPpm": { "type": "integer", "minimum": 0, "maximum": 1000000 },
+        "noveltyPpm": { "type": "integer", "minimum": 0, "maximum": 1000000 }
+      }
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["current", "previous", "dwellFrames", "reason"],
+      "properties": {
+        "current": { "enum": ["CALM", "ATTUNE", "STORM", "STALE"] },
+        "previous": { "enum": ["CALM", "ATTUNE", "STORM", "STALE"] },
+        "dwellFrames": { "type": "integer", "minimum": 0 },
+        "reason": { "type": "string" }
+      }
+    },
+    "embodiment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["intensityPpm", "energyPpm", "urgencyPpm"],
+      "properties": {
+        "intensityPpm": { "type": "integer", "minimum": 0, "maximum": 1000000 },
+        "energyPpm": { "type": "integer", "minimum": 0, "maximum": 1000000 },
+        "urgencyPpm": { "type": "integer", "minimum": 0, "maximum": 1000000 }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonicalization", "payloadHash"],
+      "properties": {
+        "canonicalization": { "const": "WORLD_JSON_V0_1" },
+        "payloadHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+      }
+    }
+  }
+}

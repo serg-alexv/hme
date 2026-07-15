@@ -1,4 +1,4 @@
-## LEGION pull request
+## WORLD 2.0 pull request
 
 ### Linked task
 

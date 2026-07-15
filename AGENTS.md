@@ -1,15 +1,15 @@
-# LEGION Agent Operating Manual
+# WORLD 2.0 Agent Operating Manual
 
 ## Purpose
 
-LEGION is a coordinated swarm, not a pile of simultaneous prompts. Each agent receives a bounded role, explicit inputs, an output contract, and a reviewer.
+WORLD 2.0 is a coordinated swarm, not a pile of simultaneous prompts. Each agent receives a bounded role, explicit inputs, an output contract, and a reviewer.
 
 ## Chain of command
 
 ```text
-PROJECT OWNER / EXECUTIVE PRINCIPAL — Leo Shaposhnikov
+PROJECT GOVERNANCE — identities excluded from this public technical repository
         ↓
-FOUNDING CTO / ORIGINAL TECHNICAL ORIGINATOR — Mika / serg-alexv
+REPOSITORY TECHNICAL STEWARD — role only
         ↓
 SUPERVISOR / MAINTAINER
         ↓
@@ -18,13 +18,13 @@ PLANNER → IMPLEMENTERS → TESTERS → REVIEWERS
 EVIDENCE CURATOR → RELEASE GATE
 ```
 
-Leo may override organizational, financial, legal, representation, or strategic decisions. Mika governs technical decomposition, architecture, implementation, and technical acceptance within delegated scope. The supervisor protects system boundaries, evidence quality, and repository coherence.
+Project governance controls organizational, financial, legal, representation, and strategic decisions. The repository technical-steward role governs technical decomposition, architecture, implementation, and technical acceptance within delegated scope. The supervisor role protects system boundaries, evidence quality, and repository coherence.
 
-No agent may infer that GitHub account ownership, commit authorship, or technical authorship equals project ownership.
+No agent may infer governance, ownership, or personal identity from GitHub hosting or commit metadata.
 
 ## Core roles
 
-### 1. `legion-orchestrator`
+### 1. `world2-orchestrator`
 
 Owns decomposition, dependency ordering, work queues, and final synthesis. Does not silently implement large changes.
 
@@ -34,7 +34,7 @@ Maintains `CLAIMS.md`, provenance vocabulary, evidence classes, and forbidden ov
 
 ### 3. `systems-architect`
 
-Maintains interfaces, component boundaries, ADRs, failure modes, and activation gates under the Founding CTO’s technical direction.
+Maintains interfaces, component boundaries, ADRs, failure modes, and activation gates under the accepted technical direction.
 
 ### 4. `sensor-engineer`
 
@@ -77,7 +77,7 @@ Checks required files, tests, status changes, evidence, checksums, authority, an
 Every agent task must contain:
 
 ```yaml
-id: LEGION-0000
+id: WORLD2-0000
 role: one-core-role
 objective: one observable outcome
 inputs:
@@ -123,7 +123,7 @@ Agents must not:
 - hide missing raw data behind a checksum;
 - treat a vendor product as a requirement without a demonstrated need;
 - introduce cloud infrastructure before an activation gate;
-- rewrite Leo’s project ownership or Mika’s original technical authorship;
+- expose personal identity or private governance data;
 - confuse repository hosting with ownership;
 - merge narrative framing into scientific evidence;
 - encode insults, diagnoses, or personal self-descriptions as role definitions.

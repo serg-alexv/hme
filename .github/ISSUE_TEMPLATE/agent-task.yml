@@ -1,6 +1,6 @@
-name: LEGION agent task
+name: WORLD 2.0 agent task
 description: Create a bounded task for a human or agentic contributor
-title: "[LEGION-0000] "
+title: "[WORLD2-0000] "
 labels: []
 body:
   - type: dropdown
@@ -18,7 +18,7 @@ body:
     attributes:
       label: Primary role
       options:
-        - legion-orchestrator
+        - world2-orchestrator
         - truth-warden
         - systems-architect
         - sensor-engineer

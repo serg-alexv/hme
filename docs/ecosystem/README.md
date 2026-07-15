@@ -1,10 +1,9 @@
-# LEGION Ecosystem Intelligence
+# WORLD 2.0 Ecosystem Intelligence
 
 **Status:** ACTIVE RESEARCH  
-**Snapshot date:** 2026-07-16  
-**Owner:** Leo Shaposhnikov  
-**Technical steward:** Mika / `serg-alexv`  
-**Maintainer function:** LEGION supervisor / truth-warden
+**Snapshot date:** 2026-07-15
+**Technical review:** role-based
+**Maintainer function:** evidence and consistency review
 
 This directory tracks projects, companies, research groups, standards bodies, open-source tools, communities, institutions, venues, partner programs, grants, and adjacent markets relevant to World 2.0.
 
@@ -71,6 +70,7 @@ The present verified nucleus uses connected-WLAN telemetry, not Wi-Fi CSI or roo
 
 - [`landscape-2026-07.md`](landscape-2026-07.md) — curated competitive and collaboration landscape.
 - [`watchlist.yaml`](watchlist.yaml) — machine-readable target registry for agentic maintenance.
+- [`../COMPARABLE_EMBODIMENT_SYSTEMS.md`](../COMPARABLE_EMBODIMENT_SYSTEMS.md) — official-source matrix of execution patterns for external state, timing, animation, transforms, and runtime constraints.
 
 ## Evidence rules
 

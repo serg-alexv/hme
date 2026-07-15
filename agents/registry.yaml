@@ -1,17 +1,16 @@
 version: "0.1"
-project: LEGION
-founder:
-  github: serg-alexv
-  role: founder-principal-architect
+project: WORLD 2.0
+project_governance:
+  role: governance-recorded-outside-public-repository
 standing_supervision:
   role: organizer-maintainer-technical-supervisor
   persistence: repository-policy
   limitations:
     - requires an active authorized session to perform actions
     - cannot make its own role technically immutable
-    - remains subordinate to founder authority and evidence policy
+    - remains subordinate to project governance and evidence policy
 roles:
-  - id: legion-orchestrator
+  - id: world2-orchestrator
     owns: [decomposition, dependencies, queue, synthesis]
   - id: truth-warden
     owns: [claims, provenance, evidence-classes, wording]

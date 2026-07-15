@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#050909" />
+    <meta name="description" content="WORLD 2.0 runtime contracts, task permissions, measurement boundary, and privacy boundary." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <title>WORLD 2.0 — Runtime contracts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="runtime.css" />
+  </head>
+  <body>
+    <div class="app-shell runtime-app">
+      <header class="topbar">
+        <div class="brand-lockup" aria-label="WORLD 2.0 Runtime contracts">
+          <strong>WORLD 2.0</strong>
+          <span aria-hidden="true"></span>
+          <h1>Runtime contracts</h1>
+        </div>
+        <nav class="mode-switch" aria-label="Runtime view">
+          <a href="index.html">Experience view</a>
+          <a class="active" href="runtime.html" aria-current="page">Proof view</a>
+        </nav>
+      </header>
+
+      <main class="runtime-layout">
+        <div class="runtime-map">
+          <p class="runtime-principle">One evidence contract. Different permissions.</p>
+
+          <section class="runtime-lane authority-lane" aria-labelledby="authorityTitle">
+            <header class="lane-heading">
+              <h2 id="authorityTitle">Math-only authority runtime</h2>
+              <p>Deterministic · replayable · no AI in the fast loop</p>
+            </header>
+            <div class="authority-flow" aria-label="Authoritative pipeline">
+              <button class="runtime-node" type="button" data-node="wlan">
+                <span class="node-title">Connected WLAN link</span>
+                <span class="node-visual laptop-visual" aria-hidden="true"><i></i><b></b></span>
+                <span class="node-tasks">acquire · timestamp · validate</span>
+              </button>
+              <span class="flow-arrow" aria-hidden="true"></span>
+              <button class="runtime-node" type="button" data-node="causal">
+                <span class="node-title">Causal frame</span>
+                <span class="node-visual frame-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span>
+                <span class="node-tasks">sequence · source · validity</span>
+              </button>
+              <span class="flow-arrow" aria-hidden="true"></span>
+              <button class="runtime-node" type="button" data-node="features">
+                <span class="node-title">Fixed-point features</span>
+                <span class="node-visual code-visual" aria-hidden="true">7A3C&nbsp; 01F2<br />0E91&nbsp; A22F<br />58F0&nbsp; 3A71</span>
+                <span class="node-tasks">derive · bound · preserve</span>
+              </button>
+              <span class="flow-arrow" aria-hidden="true"></span>
+              <button class="runtime-node" type="button" data-node="membrane">
+                <span class="node-title">State membrane</span>
+                <span class="node-visual membrane-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="node-tasks">dwell · classify · fail stale</span>
+              </button>
+              <span class="flow-arrow" aria-hidden="true"></span>
+              <button class="runtime-node verified-node" type="button" data-node="pose">
+                <span class="node-title">Pose + hash</span>
+                <span class="node-visual pose-visual" aria-hidden="true"><b>state: STORM</b><i>seq: 365</i><i>hash: 5315c08d</i></span>
+                <span class="node-tasks">emit · hash · replay</span>
+              </button>
+            </div>
+            <div class="authority-evidence">
+              <p><span>Provenance</span> SIMULATED / RECORDED_REPLAY / LIVE_WLAN / STALE_WLAN</p>
+              <p><span>Verification</span> C reference / Rust mirror / byte-identical</p>
+            </div>
+          </section>
+
+          <section class="runtime-lane experience-lane" aria-labelledby="experienceTitle">
+            <header class="lane-heading">
+              <h2 id="experienceTitle">0Math experience runtimes</h2>
+              <p>No equations required to see, play, inspect, or explain</p>
+            </header>
+            <div class="experience-branch" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i></div>
+            <div class="experience-grid">
+              <button class="runtime-node consumer-node" type="button" data-node="ui">
+                <span class="node-title">UI — see and inspect</span>
+                <span class="node-visual ui-visual" aria-hidden="true"><i></i><b></b></span>
+                <span class="node-tasks">scrub · click · compare</span>
+              </button>
+              <button class="runtime-node consumer-node selected" type="button" data-node="game">
+                <span class="node-title">Game — play and score</span>
+                <span class="node-visual game-visual" aria-hidden="true"><i></i><b></b><em></em></span>
+                <span class="node-tasks">map state · trigger mechanics · reward verified events</span>
+              </button>
+              <button class="runtime-node consumer-node" type="button" data-node="renderer">
+                <span class="node-title">Renderer — embody motion</span>
+                <span class="node-visual rig-visual" aria-hidden="true"><i></i><b></b><em></em><u></u></span>
+                <span class="node-tasks">apply pose only</span>
+              </button>
+              <button class="runtime-node consumer-node ai-node" type="button" data-node="ai">
+                <span class="node-title">AI assistant — explain and author</span>
+                <span class="node-visual assistant-visual" aria-hidden="true"><i></i><b></b><em></em></span>
+                <span class="node-tasks">explain evidence · propose mappings · compare traces</span>
+                <span class="node-warning">Never authoritative in the fast loop</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="privacy-boundary" aria-labelledby="privacyTitle">
+            <h2 id="privacyTitle">Data minimization boundary</h2>
+            <p>The current contract requires link quality, timestamp, validity, freshness, source class, derived features, state, pose, and hashes.</p>
+            <p class="excluded-data">SSID · BSSID · packet payload · account identity · person identity are not required and are not emitted by the monitor.</p>
+          </section>
+        </div>
+
+        <aside class="contract-inspector" aria-live="polite">
+          <section class="detectable-boundary">
+            <h2>What is actually detectable?</h2>
+            <div class="boundary-block allowed">
+              <span><b aria-hidden="true">✓</b> Allowed exact statement</span>
+              <p>The host computer’s active connected-WLAN telemetry.</p>
+            </div>
+            <div class="boundary-block excluded">
+              <span><b aria-hidden="true">×</b> Explicitly excluded</span>
+              <p>Not CSI · not room RF imaging · not occupancy · not physiology.</p>
+            </div>
+          </section>
+
+          <section class="selected-contract">
+            <span class="inspector-label">Selected node</span>
+            <h2 id="selectedTitle">Game — play and score</h2>
+            <span class="inspector-label">Permitted tasks</span>
+            <p id="selectedTasks">Map state · trigger mechanics · reward verified events.</p>
+            <span class="inspector-label">Contract source</span>
+            <p class="contract-source" id="selectedSource">Pose + hash (immutable)</p>
+            <p id="selectedBoundary">Game logic may interpret verified states, but cannot rewrite measurement truth.</p>
+          </section>
+
+          <section class="mapping-examples" id="mappingExamples">
+            <span class="inspector-label">Game design mappings — examples</span>
+            <p>These are interaction mappings, not physical claims.</p>
+            <ul id="exampleList">
+              <li class="attune"><strong>ATTUNE → reveal path</strong><span>Reward exploration.</span></li>
+              <li class="storm"><strong>STORM → charge hazard</strong><span>Create a challenge.</span></li>
+              <li class="stale"><strong>STALE → pause scoring</strong><span>Do not reward missing data.</span></li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="runtime.js"></script>
+  </body>
+</html>

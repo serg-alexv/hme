@@ -1,4 +1,4 @@
-# LEGION Experiments
+# WORLD 2.0 Experiments
 
 Experiments are immutable evidence units. Do not rewrite a completed experiment to improve the story; create a new experiment and compare them.
 

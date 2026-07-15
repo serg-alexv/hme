@@ -1,4 +1,4 @@
-# LEGION Roadmap
+# WORLD 2.0 Roadmap
 
 ## Operating principle
 
@@ -16,7 +16,7 @@ The roadmap is gate-driven, not calendar-fantasy-driven. A later phase cannot bo
 - [x] status ledger
 - [x] claims register
 - [x] canonical architecture
-- [ ] rename repository from staging name `hme` to `legion`
+- [ ] rename repository from staging name `hme` to `world2`
 - [ ] import preserved source packages and operator freeze through a reviewed migration
 
 ## Milestone 1 — Causal desktop proof

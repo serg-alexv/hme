@@ -1,8 +1,8 @@
-schema_version: "legion.ecosystem-watchlist/0.1"
-snapshot_date: "2026-07-16"
-repository: "serg-alexv/hme"
-owner: "Leo Shaposhnikov"
-technical_steward: "Mika / serg-alexv"
+schema_version: "world2.ecosystem-watchlist/0.1"
+snapshot_date: "2026-07-15"
+repository: "hme"
+governance: "role-based"
+technical_review: "role-based"
 maintenance:
   cadence: monthly
   refresh_before:
@@ -48,7 +48,7 @@ targets:
     applicability: "Spatial intelligence, localization, reconstruction, semantics, developer platform, and embodied-agent adjacency."
     next_action: "Create a verified product/API capability matrix and map developer-partner entry points."
     verification_status: OFFICIAL_SOURCE_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: peridot-beyond
     name: Peridot / Peridot Beyond
@@ -58,7 +58,7 @@ targets:
     applicability: "Nearest visible precedent for a persistent AR creature that perceives and reacts to the world."
     next_action: "Produce a feature-by-feature comparison covering sensing, persistence, agency, embodiment, social mechanics, and hardware dependency."
     verification_status: CURRENT_PRODUCT_DETAILS_REQUIRE_RECHECK
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: origin-wireless-adt
     name: Origin Wireless / ADT
@@ -68,7 +68,7 @@ targets:
     applicability: "Commercial validation of Wi-Fi sensing for motion, occupancy, security, and health."
     next_action: "Extract deployment lessons, acquisition facts, product claims, privacy model, and hardware assumptions."
     verification_status: OFFICIAL_AND_INDEPENDENT_SOURCES_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: espressif-esp-csi
     name: Espressif ESP-CSI
@@ -78,7 +78,7 @@ targets:
     applicability: "Most practical first hardware CSI branch after EXP-0001; official ESP32 examples and tooling."
     next_action: "Open a controlled evaluation issue; do not begin hardware implementation before the current causal proof is frozen."
     verification_status: OFFICIAL_REPOSITORY_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: snap-developers
     name: Snap Lens Studio / Camera Kit / Spectacles
@@ -88,7 +88,7 @@ targets:
     applicability: "Current embodiment platform and future native-host or wearable deployment surface."
     next_action: "Complete EXP-0001, prepare a 45-60 second causal demo, then contact developer relations with one bounded technical question."
     verification_status: OFFICIAL_SOURCE_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: ieee-80211bf
     name: IEEE 802.11bf WLAN Sensing
@@ -98,7 +98,7 @@ targets:
     applicability: "Terminology, measurement primitives, interoperability direction, and future device support for WLAN sensing."
     next_action: "Track published amendments, implementation support, and terminology affecting claims and schemas."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: zkm-hertz-lab
     name: ZKM Hertz-Lab
@@ -108,7 +108,7 @@ targets:
     applicability: "Exceptionally close institutional fit across electromagnetic fields, sensors, AI, AR/VR, and artistic research."
     next_action: "Prepare a one-page institutional fit brief and identify the correct curator/research contact."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: ars-electronica-futurelab
     name: Ars Electronica Futurelab
@@ -118,7 +118,7 @@ targets:
     applicability: "Research and exhibition ecosystem at the intersection of art, technology, society, and interactive systems."
     next_action: "Prepare a one-page fit brief and map open calls, research collaborations, and presentation routes."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: epic-megagrants
     name: Epic MegaGrants
@@ -128,7 +128,7 @@ targets:
     applicability: "Time-sensitive 2026 funding route for real-time 3D, immersive work, small teams, and open-source tooling."
     next_action: "Make an explicit Y/N engine-fit decision and draft a proof-driven application only if Unreal alignment is genuine."
     verification_status: OFFICIAL_2026_WINDOW_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: world-labs
     name: World Labs
@@ -138,7 +138,7 @@ targets:
     applicability: "Defines major spatial-intelligence narrative around persistent generated and understood 3D worlds."
     next_action: "Track APIs, exports, research disclosures, and differentiate measurable environmental causality from world generation."
     verification_status: OFFICIAL_SOURCE_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: convai
     name: Convai
@@ -148,7 +148,7 @@ targets:
     applicability: "Embodied conversational characters with perception, memory, actions, and game/XR integrations."
     next_action: "Benchmark as a later cognition layer; prohibit insertion into the deterministic fast sensor loop."
     verification_status: OFFICIAL_SOURCE_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: inworld
     name: Inworld AI
@@ -158,7 +158,7 @@ targets:
     applicability: "Realtime voice and companion infrastructure for interactive media."
     next_action: "Evaluate only after nonverbal embodiment and causal proof are stable; record latency and cost."
     verification_status: OFFICIAL_SOURCE_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: nvidia-ace
     name: NVIDIA ACE for Games
@@ -168,7 +168,7 @@ targets:
     applicability: "On-device and cloud speech, intelligence, animation, and autonomous game-character stack."
     next_action: "Track local inference and animation capabilities for future native builds."
     verification_status: OFFICIAL_SOURCE_VERIFIED
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: mit-signal-kinetics
     name: MIT Signal Kinetics
@@ -178,7 +178,7 @@ targets:
     applicability: "Leading wireless sensing, RF perception, networking, and environmental systems research."
     next_action: "Build a literature and lab-capability brief before any contact; approach with a reproducible artifact and one bounded question."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: ucsd-wcsng
     name: UC San Diego Wireless Communication Sensing and Networking Group
@@ -188,7 +188,7 @@ targets:
     applicability: "Wi-Fi sensing, localization, robotics integration, and WiROS."
     next_action: "Map current faculty, projects, datasets, and collaboration routes."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: architecture-of-radio
     name: Architecture of Radio
@@ -198,7 +198,7 @@ targets:
     applicability: "Canonical artistic precedent for making invisible communications infrastructure spatially visible."
     next_action: "Document similarities and differences to prevent weak originality claims and sharpen the creature-based distinction."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: rafael-lozano-hemmer
     name: Rafael Lozano-Hemmer / Pulse Room
@@ -208,7 +208,7 @@ targets:
     applicability: "Strong precedent for live signal, embodiment, participation, persistence, and relational architecture."
     next_action: "Extract interaction and evidence-design lessons without copying surface aesthetics."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: wifi-broadband-alliance
     name: Wireless Broadband Alliance Wi-Fi Sensing
@@ -218,7 +218,7 @@ targets:
     applicability: "Industry testing, deployment, business framing, and ecosystem coordination for Wi-Fi sensing."
     next_action: "Locate active working groups, white papers, member companies, and public events."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: siggraph
     name: ACM SIGGRAPH Art Gallery and Emerging Technologies
@@ -228,7 +228,7 @@ targets:
     applicability: "High-credibility technical-art presentation route for embodied sensing and graphics."
     next_action: "Track next call, required maturity, format, and submission deadlines."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: acm-tei
     name: ACM Tangible, Embedded, and Embodied Interaction
@@ -238,7 +238,7 @@ targets:
     applicability: "Strong conceptual and publication fit for sensor-to-embodiment systems."
     next_action: "Track calls and identify the appropriate paper, demo, or art track after EXP-0001."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: niantic-partner-program
     name: Niantic Spatial Developer Partner Program
@@ -248,7 +248,7 @@ targets:
     applicability: "Potential platform access, co-development, and visibility."
     next_action: "Verify current application path and requirements after proof video exists."
     verification_status: PROGRAM_DETAILS_REQUIRE_RECHECK
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: unity-for-humanity
     name: Unity for Humanity
@@ -258,7 +258,7 @@ targets:
     applicability: "Impact-oriented real-time 3D grant and mentorship route."
     next_action: "Develop a genuine social-impact branch; verify 2027 reopening and entity/fiscal-sponsor rules."
     verification_status: OFFICIAL_FUTURE_WINDOW_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: openxr
     name: Khronos OpenXR
@@ -268,7 +268,7 @@ targets:
     applicability: "Cross-platform XR runtime portability beyond a single vendor."
     next_action: "Preserve future interfaces so embodiment logic can migrate without rewriting the observation layer."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: openusd
     name: Alliance for OpenUSD
@@ -278,7 +278,7 @@ targets:
     applicability: "Long-term scene composition and persistent-world interchange."
     next_action: "Monitor only; no current implementation dependency."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: touchdesigner
     name: TouchDesigner
@@ -288,7 +288,7 @@ targets:
     applicability: "Rapid sensor-to-visual prototyping and installation-grade real-time media."
     next_action: "Evaluate as a parallel exhibition/prototyping surface after the Lens proof, not a replacement for the canonical pipeline."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
   - id: marsmallow-laser-feast
     name: Marshmallow Laser Feast
@@ -298,7 +298,7 @@ targets:
     applicability: "Embodied, ecological, and invisible-system experiences with strong institutional reach."
     next_action: "Study project formats, partners, and commissioning routes."
     verification_status: OFFICIAL_SOURCE_FOUND
-    last_verified: "2026-07-16"
+    last_verified: "2026-07-15"
 
 excluded_or_deferred:
   - id: llm-in-fast-loop

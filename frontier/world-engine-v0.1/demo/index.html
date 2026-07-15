@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#050909" />
+    <meta name="description" content="A deterministic, evidence-backed World 2.0 visualization of signal features driving procedural motion." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <title>WORLD 2.0 — Causal Lab</title>
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <div class="app-shell" data-state="CALM">
+      <header class="topbar">
+        <div class="brand-lockup" aria-label="WORLD 2.0 Causal Lab">
+          <strong>WORLD 2.0</strong>
+          <span aria-hidden="true"></span>
+          <h1>Causal Lab</h1>
+        </div>
+        <nav class="mode-switch" aria-label="Runtime view">
+          <a class="active" href="index.html" aria-current="page">Verified replay</a>
+          <a href="?live=1" id="liveModeLink">Live load</a>
+          <a href="runtime.html">Proof view</a>
+        </nav>
+        <div class="transport" aria-label="Replay controls">
+          <button class="button button-primary" id="replayButton" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z" /></svg>
+            Replay verified trace
+          </button>
+          <button class="button button-icon" id="pauseButton" type="button" aria-label="Pause replay" aria-pressed="false">
+            <svg class="pause-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg>
+            <svg class="play-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z" /></svg>
+          </button>
+          <button class="button button-icon" id="resetButton" type="button" aria-label="Restart replay">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 8a8 8 0 1 0 1 4h-2a6 6 0 1 1-1.76-4.24L13 11h8V3l-2 2v3Z" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div class="instrument-grid">
+          <section class="signal-panel" aria-labelledby="signalTitle">
+            <div class="section-heading">
+              <div>
+                <h2 id="signalTitle">Verified signal trace</h2>
+                <p id="signalSubtitle">SIMULATED · fixed-point fixture</p>
+              </div>
+              <span class="live-dot" aria-hidden="true"></span>
+            </div>
+
+            <div class="metric-stack" id="metricStack">
+              <article class="metric" data-metric="strength">
+                <div class="metric-copy"><span id="strengthLabel">Strength</span><strong id="strengthValue">—</strong></div>
+                <svg class="metric-chart" data-chart="strength" viewBox="0 0 320 96" preserveAspectRatio="none" role="img" aria-label="Strength across 720 frames">
+                  <path class="chart-grid" d="M0 1H320M0 48H320M0 95H320" />
+                  <polyline class="chart-line" points="" />
+                </svg>
+                <div class="load-equalizer" id="loadEqualizer" role="img" aria-label="Recent measured host network load over time; this is not an RF-frequency spectrum">
+                  <div class="equalizer-bars" id="equalizerBars" aria-hidden="true"></div>
+                  <div class="equalizer-axis"><span>older</span><strong id="equalizerCaption">waiting for measured samples</strong><span>now</span></div>
+                </div>
+              </article>
+              <article class="metric" data-metric="variability">
+                <div class="metric-copy"><span id="variabilityLabel">Variability</span><strong id="variabilityValue">—</strong></div>
+                <svg class="metric-chart" data-chart="variability" viewBox="0 0 320 96" preserveAspectRatio="none" role="img" aria-label="Variability across 720 frames">
+                  <path class="chart-grid" d="M0 1H320M0 48H320M0 95H320" />
+                  <polyline class="chart-line" points="" />
+                </svg>
+              </article>
+              <article class="metric" data-metric="novelty">
+                <div class="metric-copy"><span id="noveltyLabel">Novelty</span><strong id="noveltyValue">—</strong></div>
+                <svg class="metric-chart" data-chart="novelty" viewBox="0 0 320 96" preserveAspectRatio="none" role="img" aria-label="Novelty across 720 frames">
+                  <path class="chart-grid" d="M0 1H320M0 48H320M0 95H320" />
+                  <polyline class="chart-line" points="" />
+                </svg>
+              </article>
+              <div class="chart-playhead" id="chartPlayhead" aria-hidden="true"><span></span></div>
+            </div>
+          </section>
+
+          <section class="embodiment-panel" aria-labelledby="embodimentTitle">
+            <div class="embodiment-heading">
+              <h2 id="embodimentTitle">Procedural embodiment</h2>
+              <p id="embodimentSubtitle">Pose only · no keyframed state animation</p>
+            </div>
+            <div class="dragon-stage">
+              <div class="motion-readout wing-readout"><span>Wing</span><strong id="wingAngle">—</strong></div>
+              <div class="motion-readout tail-readout"><span>Tail</span><strong id="tailAngle">—</strong></div>
+              <svg class="dragon" id="dragon" viewBox="0 0 760 600" role="img" aria-labelledby="dragonTitle dragonDescription">
+                <title id="dragonTitle">Deterministic procedural dragon</title>
+                <desc id="dragonDescription">A line-art dragon whose root, neck, head, wings, and tail transform from the selected verified pose frame.</desc>
+                <defs>
+                  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="5" result="blur" />
+                    <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                  </filter>
+                </defs>
+                <g class="wave-field" aria-hidden="true">
+                  <path d="M180 334C265 235 389 204 544 236" />
+                  <path d="M168 360C270 253 412 232 577 271" />
+                  <path d="M171 388C289 290 428 284 594 315" />
+                </g>
+                <g id="dragonRoot" class="dragon-root">
+                  <g class="tail-chain">
+                    <g id="tail1" class="tail-segment tail-one">
+                      <path class="bone-fill" d="M466 403C527 408 582 433 621 470C600 463 574 455 548 452C517 448 487 439 459 421Z" />
+                      <path class="bone-line" d="M466 412C526 419 579 438 620 470" />
+                      <circle class="joint" cx="469" cy="413" r="9" />
+                      <g id="tail2" class="tail-segment tail-two">
+                        <path class="bone-fill" d="M608 462C652 474 688 491 714 517C688 507 660 501 627 499Z" />
+                        <path class="bone-line" d="M616 476C655 486 685 499 714 517" />
+                        <circle class="joint" cx="615" cy="476" r="8" />
+                        <g id="tail3" class="tail-segment tail-three">
+                          <path class="bone-fill" d="M705 510C729 517 743 528 752 544C734 537 720 534 703 534Z" />
+                          <path class="bone-line" d="M710 523L752 544" />
+                          <circle class="joint" cx="710" cy="523" r="7" />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+
+                  <g class="body">
+                    <path class="body-shell" d="M278 334C333 304 419 313 478 365C493 388 482 426 449 446C392 476 308 454 268 407C251 386 255 352 278 334Z" />
+                    <path class="body-detail" d="M289 350C331 330 401 335 455 373M278 382C330 365 414 377 468 410M292 414C343 404 405 419 441 442" />
+                    <path class="body-detail" d="M313 326L319 448M349 318L353 462M390 326L390 462M428 340L424 454" />
+                    <circle class="joint major" cx="302" cy="371" r="12" />
+                    <circle class="joint" cx="451" cy="412" r="10" />
+                  </g>
+
+                  <g id="wingL" class="wing wing-left">
+                    <path class="wing-spar" d="M330 354C284 251 217 167 113 97C202 119 299 171 367 264L330 354Z" />
+                    <path class="wing-membrane" d="M326 337C285 255 224 185 130 112C213 139 287 188 349 267C331 234 326 196 322 157C356 201 375 242 385 291C368 270 352 256 337 247C349 285 348 311 326 337Z" />
+                    <path class="wing-ribs" d="M326 330L130 112M342 300L322 157M350 277L202 139M362 281L269 170" />
+                    <circle class="joint major" cx="331" cy="351" r="12" />
+                  </g>
+
+                  <g id="wingR" class="wing wing-right">
+                    <path class="wing-spar" d="M407 354C471 229 554 139 684 76C573 87 474 136 395 254L407 354Z" />
+                    <path class="wing-membrane" d="M413 337C470 238 548 158 668 89C569 110 487 162 416 260C445 223 457 181 466 137C428 186 404 237 393 290C414 266 435 248 455 237C435 280 425 312 413 337Z" />
+                    <path class="wing-ribs" d="M411 329L668 89M405 302L466 137M414 276L596 120M398 283L525 149" />
+                    <circle class="joint major" cx="409" cy="351" r="12" />
+                  </g>
+
+                  <g class="legs" aria-hidden="true">
+                    <path class="limb" d="M313 420L286 487L238 536M286 487L302 545" />
+                    <path class="claw" d="M238 536L218 545M238 536L232 555M302 545L291 561M302 545L310 561" />
+                    <path class="limb" d="M424 429L451 492L493 541M451 492L438 550" />
+                    <path class="claw" d="M493 541L510 551M493 541L498 560M438 550L428 566M438 550L447 566" />
+                  </g>
+
+                  <g id="neck1" class="neck neck-one">
+                    <path class="neck-shell" d="M296 354C272 319 259 274 269 226C279 178 260 142 226 116C274 130 310 169 313 221C316 265 329 298 353 327Z" />
+                    <path class="neck-detail" d="M293 335C279 296 281 253 293 214C300 181 278 150 244 125M278 292L320 298M272 256L312 263M275 218L309 228M268 179L297 194" />
+                    <circle class="joint major" cx="309" cy="340" r="11" />
+                    <g id="neck2" class="neck neck-two">
+                      <path class="neck-shell" d="M271 229C249 200 225 179 192 166C166 156 142 133 132 106C164 122 190 124 217 119C253 114 281 139 297 174Z" />
+                      <path class="neck-detail" d="M278 214C250 185 222 170 184 157C163 149 145 131 136 111" />
+                      <circle class="joint" cx="276" cy="220" r="9" />
+                      <g id="head" class="head">
+                        <path class="head-shell" d="M139 104L88 91L43 112L77 130L49 151L96 157L126 142L161 149L149 127L179 109Z" />
+                        <path class="horn" d="M107 98L90 62L126 91M139 103L150 66L160 106" />
+                        <path class="head-detail" d="M63 116L117 119L148 108M76 133L126 139" />
+                        <circle class="eye" cx="103" cy="113" r="4" />
+                        <circle class="joint major" cx="149" cy="123" r="10" />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </section>
+
+          <aside class="causal-panel" aria-labelledby="causalTitle">
+            <h2 class="sr-only" id="causalTitle">Causal chain</h2>
+            <ol class="causal-rail">
+              <li class="causal-step input-step">
+                <span class="step-number">1</span>
+                <div><span>Input</span><strong id="inputLabel">Verified synthetic replay</strong></div>
+              </li>
+              <li class="causal-step feature-step">
+                <span class="step-number">2</span>
+                <div>
+                  <span>Features</span>
+                  <dl>
+                    <div><dt>Strength</dt><dd id="railStrength">—</dd></div>
+                    <div><dt>Variability</dt><dd id="railVariability">—</dd></div>
+                    <div><dt>Novelty</dt><dd id="railNovelty">—</dd></div>
+                  </dl>
+                </div>
+              </li>
+              <li class="causal-step state-step">
+                <span class="step-number">3</span>
+                <div><span>State</span><strong id="behaviorValue">—</strong></div>
+              </li>
+              <li class="causal-step motion-step">
+                <span class="step-number">4</span>
+                <div>
+                  <span>Motion</span>
+                  <dl>
+                    <div><dt>Wings</dt><dd id="railWing">—</dd></div>
+                    <div><dt>Tail</dt><dd id="railTail">—</dd></div>
+                  </dl>
+                </div>
+              </li>
+            </ol>
+            <div class="cause-explanation" aria-live="polite">
+              <h3>Why did this move?</h3>
+              <p id="causeText">Loading verified trace…</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="timeline-section" aria-labelledby="timelineTitle">
+          <div class="timeline-heading">
+            <h2 id="timelineTitle">720-frame causal replay</h2>
+            <p><span id="selectedSequence">seq —</span><span aria-hidden="true">·</span><span id="selectedTime">—</span></p>
+          </div>
+          <div class="timeline" id="timeline">
+            <button class="state-band calm" type="button" data-sequence="0" style="--start:0;--span:25.9722"><span>CALM</span><small>0</small></button>
+            <button class="state-band attune" type="button" data-sequence="187" style="--start:25.9722;--span:24.7222"><span>ATTUNE</span><small>187</small></button>
+            <button class="state-band storm" type="button" data-sequence="365" style="--start:50.6944;--span:24.3056"><span>STORM</span><small>365</small></button>
+            <button class="state-band stale" type="button" data-sequence="540" style="--start:75;--span:25"><span>STALE</span><small>540</small></button>
+            <div class="timeline-ticks" aria-hidden="true"></div>
+            <button class="timeline-playhead" id="timelinePlayhead" type="button" aria-label="Selected sequence"><span></span><strong id="playheadLabel">—</strong></button>
+          </div>
+          <button class="sender-stop" id="senderStopButton" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="m7 7 10 10" /></svg>
+            Sender stop → STALE
+          </button>
+        </section>
+      </main>
+
+      <footer class="evidence-strip" aria-label="Verification evidence">
+        <div class="evidence-title">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.6c0 4.6 3.1 8 7.5 9.4 4.4-1.4 7.5-4.8 7.5-9.4V6L12 3Z" /><path d="m8.5 12 2.2 2.2 4.8-5" /></svg>
+          <strong>Evidence</strong>
+        </div>
+        <div class="evidence-item"><span>source</span><strong id="sourceValue">—</strong></div>
+        <div class="evidence-item"><span>freshness</span><strong id="freshnessValue">—</strong></div>
+        <div class="evidence-item"><span>sequence</span><strong id="sequenceValue">—</strong></div>
+        <div class="evidence-item"><span>frame hash</span><strong id="frameHashValue">—</strong></div>
+        <div class="evidence-item verified"><span>trace hash</span><strong id="traceHashValue">verifying…</strong></div>
+        <div class="evidence-item verified"><span>cross-language</span><strong id="languageValue">verifying…</strong></div>
+        <div class="evidence-item verified"><span>first divergence</span><strong id="divergenceValue">verifying…</strong></div>
+      </footer>
+    </div>
+
+    <div class="error-screen" id="errorScreen" hidden>
+      <strong>Verification unavailable</strong>
+      <p id="errorMessage">The trace could not be loaded.</p>
+    </div>
+    <script type="module" src="app.js?v=2"></script>
+  </body>
+</html>

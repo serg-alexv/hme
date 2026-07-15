@@ -1,0 +1,29 @@
+{
+  "schema": "world.verification/0.1",
+  "status": "PASS",
+  "frames": 720,
+  "sha256": "d965aa4a6397378a9385073e0b69657d9eb049cf577e3912e2c15c1af6be173d",
+  "transitions": [
+    {
+      "sequence": 0,
+      "behavior": "CALM"
+    },
+    {
+      "sequence": 187,
+      "behavior": "ATTUNE"
+    },
+    {
+      "sequence": 365,
+      "behavior": "STORM"
+    },
+    {
+      "sequence": 540,
+      "behavior": "STALE"
+    }
+  ],
+  "reference": "c",
+  "candidates": [
+    "rust"
+  ],
+  "first_divergence": null
+}

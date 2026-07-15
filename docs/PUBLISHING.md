@@ -1,12 +1,12 @@
-# LEGION External Publishing Rule
+# WORLD 2.0 External Publishing Rule
 
 ## Purpose
 
-This policy governs publication or distribution of project material outside the controlled LEGION repository workflow.
+This policy governs publication or distribution of project material outside the controlled WORLD 2.0 repository workflow.
 
 ## Core rule
 
-No human or agentic contributor may publish AI-assisted project material to an external resource without Mika's direct human revision of the publication candidate.
+No human or agentic contributor may publish AI-assisted project material to an external resource without direct revision or acceptance by the repository technical steward.
 
 External resources include, without limitation:
 
@@ -23,17 +23,17 @@ External resources include, without limitation:
 ```text
 agent or team draft
 → source and evidence check
-→ Mika technical/editorial revision
+→ repository technical-steward revision
 → claims-register consistency check
-→ Leo approval when Class D authority applies
+→ verified project-owner approval when Class D authority applies
 → external publication
 → repository record of the published version, destination, date, identifier, and checksum
 ```
 
 ## Authority
 
-- **Mika**, as Founding CTO and Original Technical Originator, performs or explicitly accepts the final technical and editorial revision of AI-assisted publication material.
-- **Leo Shaposhnikov**, as project owner and executive principal, retains final authority for external representation, legal commitments, licensing, investor promises, strategic releases, and other Class D consequences.
+- The **repository technical steward** performs or explicitly accepts the final technical and editorial revision of AI-assisted publication material.
+- Public releases require technical verification, an explicit artifact manifest, and confirmation that distribution rights are documented.
 - Agents may research, draft, format, compare venues, prepare metadata, and stage submission packages. They may not independently perform the final external publication action unless the required human approvals have been recorded for that exact version and destination.
 
 ## Version identity
@@ -53,7 +53,7 @@ The publication record must preserve:
 
 ## Repository publication versus external publication
 
-Ordinary commits to the LEGION repository may be used for controlled working drafts and historical development. They do not constitute approval for external scholarly, archival, commercial, institutional, or media publication.
+Ordinary commits to the WORLD 2.0 repository may be used for controlled working drafts and historical development. They do not constitute approval for external scholarly, archival, commercial, institutional, or media publication.
 
 ## Emergency correction
 

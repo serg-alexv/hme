@@ -1,0 +1,5 @@
+#include "resources.h"
+
+IDR_DRAGON_CALM PNG "assets\\warrior-dragon-calm.png"
+IDR_DRAGON_ATTUNE PNG "assets\\warrior-dragon-attune.png"
+IDR_DRAGON_STORM PNG "assets\\warrior-dragon-storm.png"

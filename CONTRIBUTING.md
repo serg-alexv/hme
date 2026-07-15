@@ -1,4 +1,4 @@
-# Contributing to LEGION
+# Contributing to WORLD 2.0
 
 ## Before opening work
 
@@ -27,10 +27,10 @@ The issue must define:
 ## Branch naming
 
 ```text
-feat/LEGION-0000-short-name
-fix/LEGION-0000-short-name
-docs/LEGION-0000-short-name
-exp/LEGION-0000-short-name
+feat/WORLD2-0000-short-name
+fix/WORLD2-0000-short-name
+docs/WORLD2-0000-short-name
+exp/WORLD2-0000-short-name
 ```
 
 ## Commit rules

@@ -1,0 +1,5 @@
+{
+  "name": "WorldEngine Pose Bridge",
+  "main": "main.js",
+  "permissions": ["network"]
+}

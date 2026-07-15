@@ -1,0 +1,14 @@
+[package]
+name = "world-engine"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "world_engine"
+path = "src/lib.rs"
+
+[[bin]]
+name = "world-engine-monitor"
+path = "src/main.rs"
+
+[dependencies]

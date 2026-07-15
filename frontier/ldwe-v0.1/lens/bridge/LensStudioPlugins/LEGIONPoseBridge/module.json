@@ -1,5 +1,0 @@
-{
-  "name": "LEGION Pose Bridge",
-  "main": "main.js",
-  "permissions": ["network"]
-}

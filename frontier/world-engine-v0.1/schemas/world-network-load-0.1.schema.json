@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world2.example/schemas/world-network-load-0.1.schema.json",
+  "title": "World 2.0 measured host network-load frame",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "sequence",
+    "timestamp_unix_ms",
+    "source",
+    "valid",
+    "capacity_mbps",
+    "throughput_mbps",
+    "load",
+    "load_q16",
+    "behavior"
+  ],
+  "properties": {
+    "schema": { "const": "world.network-load/0.1" },
+    "sequence": { "type": "integer", "minimum": 0 },
+    "timestamp_unix_ms": { "type": "integer", "minimum": 0 },
+    "source": { "const": "WINDOWS_INTERFACE_BYTES" },
+    "valid": { "type": "boolean" },
+    "error": { "type": "string", "minLength": 1 },
+    "sample_period_ms": { "type": "integer", "minimum": 1 },
+    "received_bytes": { "type": "integer", "minimum": 0 },
+    "sent_bytes": { "type": "integer", "minimum": 0 },
+    "throughput_mbps": { "type": ["number", "null"], "minimum": 0 },
+    "capacity_mbps": { "type": "number", "exclusiveMinimum": 0 },
+    "load": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "load_q16": { "type": ["integer", "null"], "minimum": 0, "maximum": 65535 },
+    "behavior": { "enum": ["CALM", "ATTUNE", "STORM", "STALE"] },
+    "frame_hash": { "type": "string", "pattern": "^[0-9a-f]{16}$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "valid": { "const": true } }, "required": ["valid"] },
+      "then": {
+        "required": [
+          "sample_period_ms",
+          "received_bytes",
+          "sent_bytes",
+          "frame_hash"
+        ]
+      },
+      "else": { "required": ["error"] }
+    }
+  ]
+}

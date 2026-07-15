@@ -1,143 +1,93 @@
-# Canonical System Architecture
+# Canonical system architecture
 
-## 1. Stable abstraction
+## 1. Research object
 
-```text
-SensorAdapter
-→ Observation
-→ FeatureExtractor
-→ BehaviorClassifier
-→ EmbodimentAdapter
-→ EvidenceRecorder
-```
-
-The sensor and embodiment are replaceable. Provenance, schemas, state semantics, evidence, and acceptance criteria are durable.
-
-## 2. Current desktop path
+World 2.0 studies a portable transformation:
 
 ```text
-Intel AX200 / Windows WLAN
-→ Python `netsh` acquisition
-→ rolling feature derivation
-→ JSONL live-state frames
-→ localhost TCP 127.0.0.1:19331
-→ Lens Studio Editor plug-in
-→ DragonNetworkStateLive inputs
-→ procedural bone animation
+bounded observation
+→ declared features
+→ deterministic state or direct bounded mapping
+→ embodied output
+→ inspectable evidence
 ```
 
-### Current acquisition fields
+The observation, transformation, and output must remain distinguishable. A renderer may present the result; it may not enlarge what the sensor measured.
 
-- timestamp
-- connection validity
-- direct RSSI when available
-- driver quality percentage
-- freshness
-
-### Derived fields
-
-- normalized strength
-- rolling variability
-- rolling novelty
-- sequence
-- source class
-
-## 3. Behavior vocabulary
+## 2. Verified live surface
 
 ```text
-CALM
-ATTUNE
-STORM
-STALE / SENSOR_LOSS
+Windows aggregate interface byte counters (`netstat -e`)
+→ 250 ms byte deltas
+→ measured throughput
+→ load = min(1, throughput / declared capacity)
+→ direct bounded browser pose
+→ visible counters, state, angles, history, and frame hash
 ```
 
-Current classifier intent:
+Schema: `world.network-load/0.1` for the measurement and `world.network-load-pose/0.1` for the browser presentation frame.
+
+This surface proves that a measured host-network-load value changes the browser dragon pose. It does not identify Wi-Fi radio conditions, packet meaning, a person, or a location.
+
+## 3. Verified conformance surface
 
 ```text
-invalid or stale                         → STALE / SENSOR_LOSS
-high novelty AND high variability       → STORM
-moderate novelty OR moderate variability→ ATTUNE
-otherwise                                → CALM
+shared synthetic 720-frame feature schedule
+        ├─ C11 fixed-point kernel
+        └─ Rust fixed-point kernel
+              ↓
+       byte-identical `world.pose/0.1`
 ```
 
-Thresholds are configuration, not universal physical truths.
+This surface verifies state ordering, dwell, stale recovery, bounded motion waves, serialization, and cross-language equality. It is not the process currently producing the live browser frames.
 
-## 4. Provenance vocabulary
+## 4. Current integration gap
+
+The live measurement adapter and the fixed-point WorldEngine kernel are separate verification surfaces. The next integration gate is:
 
 ```text
-SIMULATED
-RECORDED_REPLAY
-LIVE_WLAN
-STALE_WLAN
+world.network-load/0.1
+→ declared feature adapter
+→ WorldEngine
+→ world.pose/0.1
+→ browser and Lens consumers
 ```
 
-Embodiment must not erase provenance. A visible or inspectable source label is required for demonstrations.
+Completion requires one preserved run showing raw counters, adapter output, engine pose, rendered motion, stale behavior, versions, and hashes.
 
-## 5. Deployment ladder
+## 5. Lens surface
 
-### Phase A — desktop causal proof
+The repository contains a packaged Lens Studio consumer and editor bridge. It has not been verified end to end in this repository state.
+
+Planned path:
 
 ```text
-live/replayed Windows telemetry
-→ local bridge
-→ Lens Studio Preview
+verified pose stream
+→ local Lens Studio bridge
+→ named rig joints
+→ bounded transforms and material parameters
 ```
 
-### Phase B — portable proof
+Camera use, when added, is a separate spatial-registration function: floor detection, pose, anchor, and placement. Network telemetry does not provide room coordinates.
 
-```text
-recorded real trace
-→ embedded Lens replay
-→ Snapchat phone Preview
-```
+## 6. Runtime boundaries
 
-### Phase C — live mobile product
+| Component | Owns | Does not own |
+|---|---|---|
+| measurement adapter | acquisition, timestamps, validity, provenance | creature meaning or pose |
+| feature adapter | declared normalization and error handling | hidden inference |
+| WorldEngine | state history, deterministic waves, pose, hash | measurement acquisition or rendering |
+| browser/Lens/game adapter | application of an accepted pose or bounded state | rewriting provenance or measurement truth |
+| evidence recorder | raw inputs, outputs, configuration, versions, hashes | retrospective fabrication of missing data |
 
-```text
-native sensor adapter
-→ Camera Kit host
-→ Remote API
-→ Lens
-```
+## 7. Failure rules
 
-### Phase D — sovereign native product
+- counter failure produces an invalid frame, not a plausible default;
+- stale input produces a visible stale state;
+- unknown schema or source is rejected;
+- missing raw evidence is labeled `EVIDENCE_MISSING` or `HISTORICAL_REPORT`;
+- unsupported sensing, platform, or life claims block publication.
 
-```text
-iPhone sensors / BLE peripherals
-→ local feature engine
-→ native persistence
-→ RealityKit / Metal / SceneKit embodiment
-```
+## 8. Platform scope
 
-## 6. Separately gated research
-
-- ESP32 / Wi-Fi CSI sensing
-- magnetometer adapter
-- broadband RF adapter
-- Lorenz/RK4 motion channels
-- ADK offline interpretation/auditing
-- global persistent world state
-
-Each research branch must implement the common observation/feature contract rather than bypass it.
-
-## 7. Failure model
-
-The system must fail visibly and conservatively:
-
-- acquisition failure → invalid observation;
-- stale timestamp → `STALE_WLAN`;
-- schema violation → reject frame;
-- unknown source → reject frame;
-- broken bridge → no false live label;
-- missing raw evidence → `EVIDENCE_MISSING`;
-- unsupported claim → block release.
-
-## 8. Production evolution gates
-
-Replace `netsh` with a native WLAN API only when sampling overhead, reliability, or deployment demands it.
-
-Add cloud ingest only when a second external device/user requires remote upload.
-
-Add Pub/Sub only when multiple producers/consumers, fan-out, backlog, or retry semantics are demonstrated.
-
-Add globally consistent databases only when real multi-user transactional world state exists.
+Portability is a design target. Current verification covers a Windows measurement adapter and a browser renderer. Lens Studio, Camera Kit, native mobile, game engines, and physical actuators require separate adapters and separate runtime evidence.
