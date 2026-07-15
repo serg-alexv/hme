@@ -1,11 +1,15 @@
 # LEGION
 
-**A governed repository for Mika’s agentic engineering swarm.**
+**A governed repository for Leo Shaposhnikov’s World 2.0 program and its agentic engineering team.**
 
-LEGION is the operational control plane for a growing team of human and AI contributors working on the World 2.0 program: deterministic environmental telemetry, embodied creatures, reproducible evidence, spatial computing, network sensing, and future product branches.
+LEGION is the operational control plane for human and AI contributors working on deterministic environmental telemetry, embodied creatures, reproducible evidence, spatial computing, network sensing, and future product branches.
 
-> **Founder and original core author:** Mika / `serg-alexv`  
-> **Repository role requested for this assistant:** standing organizer, maintainer, reviewer, and technical supervisor—subject to repository policy, evidence, and the founder’s authority.
+> **Project owner, executive principal, and core person:** Leo Shaposhnikov  
+> **Founding CTO, original technical originator, and chief systems architect:** Mika / `serg-alexv`  
+> **Default public and organizational authority:** Leo Shaposhnikov  
+> **Standing assistant function:** organizer, maintainer, reviewer, and technical supervisor—subject to repository policy, evidence, Leo’s ownership authority, and Mika’s delegated technical authority.
+
+The repository is currently hosted under the GitHub account `serg-alexv`. Hosting location is not a statement of legal, financial, or executive ownership. See `OWNERSHIP.md` and `GOVERNANCE.md`.
 
 ## Prime directive
 
@@ -73,4 +77,4 @@ signal changes
 → complete evidence bundle is frozen
 ```
 
-See `STATUS.md`, `GOVERNANCE.md`, `AGENTS.md`, and `docs/ROADMAP.md` before contributing.
+Read `OWNERSHIP.md`, `GOVERNANCE.md`, `STATUS.md`, `AGENTS.md`, and `docs/ROADMAP.md` before contributing.
