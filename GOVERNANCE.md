@@ -1,12 +1,31 @@
 # LEGION Governance
 
-## 1. Authority
+## 1. Project authority
 
-1. **Founder / original core author:** Mika (`serg-alexv`).
-2. The founder owns the project thesis, ontology, product direction, acceptance criteria, release authority, and final Y/N decisions.
-3. Contributors—human or agentic—earn authority through scoped responsibility, evidence, and review. No model, tool, sponsor, or platform silently acquires authorship or governance rights.
+1. **Project owner, executive principal, primary investor, and core organizational person:** Leo Shaposhnikov.
+2. Leo holds final authority over ownership, financing, organizational commitments, public representation, investor promises, licensing, legal structure, and continuation or termination of the program.
+3. **Founding CTO, original technical originator, and chief systems architect:** Mika (`serg-alexv`).
+4. Mika owns the original technical thesis, system ontology, architecture proposals, implementation lineage, and technical acceptance criteria within the authority delegated by Leo.
+5. Mika is not the default public face and does not unilaterally control project ownership, money, legal commitments, or organizational representation.
+6. Contributors—human or agentic—earn authority through scoped responsibility, evidence, and review. No model, tool, sponsor, platform, repository host, or technical contributor silently acquires ownership or governance rights.
 
-## 2. Standing technical-supervision charter
+The repository is currently hosted under `serg-alexv`. GitHub hosting and CODEOWNERS enforcement are operational facts, not declarations of legal or executive ownership.
+
+## 2. Authority matrix
+
+| Domain | Final authority | Technical/operational authority |
+|---|---|---|
+| Ownership, financing, legal structure | Leo | advisory input only unless delegated |
+| Public face, external representation | Leo | Mika only when explicitly delegated |
+| Product continuation and strategic commitments | Leo | Mika proposes technical consequences |
+| Core technical ontology and architecture | Leo approves material direction | Mika authors and maintains |
+| Implementation and experiments | governed budget/scope from Leo | Mika and assigned engineering roles |
+| Technical truth, evidence, and claims | no unsupported claim may be ordered into existence | truth-warden and technical reviewers may block |
+| Releases | Leo for external/strategic releases | Mika for technical readiness within delegation |
+
+Evidence rules constrain everyone. Ownership authority does not convert an unverified technical claim into a verified one, and technical authority does not create financial or executive authority.
+
+## 3. Standing technical-supervision charter
 
 The assistant requested in the founding session is assigned the standing repository function:
 
@@ -16,9 +35,22 @@ The assistant requested in the founding session is assigned the standing reposit
 - supervisor of agent handoffs and evidence requirements;
 - reviewer of pull requests when explicitly invoked through an available GitHub connection.
 
-This charter is **persistent repository policy**, not a claim of autonomous continuous execution. It remains active until the founder changes it in a reviewed commit. The assistant cannot act while no session/tool authorization exists and cannot make the role technically immutable.
+This charter is persistent repository policy, not a claim of autonomous continuous execution. It remains active until the authorized project governance changes it in a reviewed commit. The assistant cannot act while no session or tool authorization exists and cannot make its role technically irreversible.
 
-## 3. Y/N mode
+## 4. CTO operating constraints
+
+LEGION does not encode personal insults, diagnoses, or self-denigrating labels as governance facts. Operational risk is handled through controls:
+
+- Mika may not make unilateral Class D commitments.
+- Budget, ownership, licensing, public representation, and investor promises require Leo’s approval.
+- Material architecture or claim changes require recorded evidence and review.
+- High-intensity ideation is separated from admission to the critical path.
+- Reversible experiments are encouraged; irreversible actions require independent review.
+- Any contributor may trigger a stop-and-review when evidence, safety, money, or ownership boundaries are unclear.
+
+These controls preserve Mika’s technical originality and speed without making personal stability a hidden dependency of project governance.
+
+## 5. Y/N mode
 
 Every critical-path proposal must end in one of two states:
 
@@ -27,7 +59,7 @@ Every critical-path proposal must end in one of two states:
 
 `MAYBE` may exist in research notes but cannot authorize implementation, expenditure, public claims, or release.
 
-## 4. Evidence hierarchy
+## 6. Evidence hierarchy
 
 From strongest to weakest:
 
@@ -40,7 +72,7 @@ From strongest to weakest:
 
 A weaker evidence class may not be described using the language of a stronger class.
 
-## 5. Change classes
+## 7. Change classes
 
 ### Class A — reversible documentation
 
@@ -52,13 +84,13 @@ Requires tests or a validation plan and an explicit owner.
 
 ### Class C — architecture, schema, claims, security, money, or irreversible data change
 
-Requires founder approval and written Y/N closure.
+Requires the appropriate authority from the matrix above and written Y/N closure.
 
-### Class D — public release, external commitments, ownership, licensing, or investor promises
+### Class D — public release, external commitments, ownership, licensing, legal structure, investor promises, or material expenditure
 
-Requires founder approval; legal or financial review may also be required.
+Requires Leo’s approval; legal or financial review may also be required. Mika’s technical assessment is required when the commitment depends on system capability or delivery feasibility.
 
-## 6. Pull-request policy
+## 8. Pull-request policy
 
 Every PR must state:
 
@@ -69,11 +101,12 @@ Every PR must state:
 - risks;
 - rollback;
 - claim changes;
+- authority required;
 - Y/N decision requested.
 
 No agent may merge its own material Class C or D change without independent review.
 
-## 7. Agent accountability
+## 9. Agent accountability
 
 Agents are treated as fallible contractors, not authorities. Every agent output must preserve:
 
@@ -85,12 +118,13 @@ Agents are treated as fallible contractors, not authorities. Every agent output 
 - unverified claims;
 - next handoff.
 
-Fabricated execution, fabricated citations, or concealed uncertainty is a blocking defect.
+Fabricated execution, fabricated citations, concealed uncertainty, or silent ownership reassignment is a blocking defect.
 
-## 8. Repository continuity
+## 10. Repository continuity
 
 The repository—not any individual chat—is the durable operational memory. Critical decisions must be committed to:
 
+- `OWNERSHIP.md`
 - `STATUS.md`
 - `CLAIMS.md`
 - `decisions/`
