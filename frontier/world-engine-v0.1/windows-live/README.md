@@ -1,51 +1,19 @@
-# Windows product
+# World2NetworkDragon.exe
 
-Double-click:
+Native x64 Windows network pet. It reads aggregate host network counters and maps the measured load to a breathing creature with articulated wings, plus Equalizer and Field views.
 
-```text
-dist/World2NetworkDragon.exe
-```
+## Run
 
-No Python, Rust, compiler, Lens Studio, Snapchat, or browser server is required.
+Double-click `dist/World2NetworkDragon.exe`. No Python, browser, server, or external asset is required.
 
-## Verified behavior
+Controls: `M` LIVE/REPLAY, `D` Dragon, `E` Equalizer, `F` Field, `↑`/`↓` reference capacity, `R` reset, `T` always-on-top.
 
-```text
-Windows byte-counter deltas
-→ throughput
-→ WorldStateFrame 0.1
-→ Dragon | Equalizer | Field
-```
-
-The default Pet is an embedded render derived from the supplied rigged FBX. The application also provides a useful live upload/download monitor and exports its current frame to:
-
-```text
-%LOCALAPPDATA%\World2\world-state.json
-```
-
-Controls:
-
-- `D`, `E`, `F`: select Pet.
-- `M`: measured live counters / labelled replay.
-- `↑`, `↓`: change declared normalization reference.
-- `R`: reset live baseline.
-- `T`: toggle always-on-top.
+The active frame is exported atomically to `%LOCALAPPDATA%\World2\world-state.json`. Its `integrity.payloadHash` is a BCrypt SHA-256 over the canonical frame body.
 
 ## Measurement boundary
 
-```text
-throughput_bps = 8 × (ΔRX_bytes + ΔTX_bytes) / Δtime_seconds
-```
+Every 250 ms, `GetIfTable2` aggregates received/sent counters from connected, operational, non-loopback interfaces. This is host throughput—not RF sensing, packet inspection, person detection, or location estimation.
 
-This is aggregate host network traffic from connected, operational, non-loopback interfaces. It is not RF spectrum, WLAN CSI, packet inspection, person detection, or room location.
+## Build
 
-## Release candidate
-
-```text
-bytes: 718336
-sha256: 4f999368232fc318d7301ab229ce3eccf22e5b4e0ae380cb5dff5a92a9d9bccc
-```
-
-The hash must be regenerated if the executable is rebuilt.
-
-![Verified live Windows product](../../../docs/images/windows-live-network-pets.png)
+From an x64 Native Tools Command Prompt for Visual Studio 2022, run `build_windows.bat`. The binary uses `/MT /O2 /W4 /WX` and standard Windows system libraries.

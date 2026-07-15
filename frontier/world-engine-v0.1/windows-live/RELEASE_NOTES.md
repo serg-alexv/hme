@@ -20,5 +20,5 @@ The input is aggregate host network throughput. It is not RF spectrum, WLAN CSI,
 ## Release hash
 
 ```text
-sha256 4f999368232fc318d7301ab229ce3eccf22e5b4e0ae380cb5dff5a92a9d9bccc  World2NetworkDragon.exe
+sha256 b2107825ff8d582fb0f23a9f099c943f2cf036bdf0f125fd0c589e57b8d194d7  World2NetworkDragon.exe
 ```
