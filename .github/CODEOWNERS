@@ -1,0 +1,11 @@
+# Founder retains final review authority across the repository.
+* @serg-alexv
+
+# High-risk control surfaces
+/GOVERNANCE.md @serg-alexv
+/CLAIMS.md @serg-alexv
+/STATUS.md @serg-alexv
+/architecture/ @serg-alexv
+/schemas/ @serg-alexv
+/decisions/ @serg-alexv
+/.github/ @serg-alexv
