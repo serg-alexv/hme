@@ -1,0 +1,315 @@
+schema_version: "legion.ecosystem-watchlist/0.1"
+snapshot_date: "2026-07-16"
+repository: "serg-alexv/hme"
+owner: "Leo Shaposhnikov"
+technical_steward: "Mika / serg-alexv"
+maintenance:
+  cadence: monthly
+  refresh_before:
+    - grant_application
+    - investor_briefing
+    - partner_outreach
+    - public_novelty_claim
+    - architecture_expansion
+  required_checks:
+    - current_product_status
+    - official_source
+    - contact_path
+    - eligibility
+    - licensing
+    - geographic_constraints
+    - claims_impact
+
+relationship_classes:
+  - DIRECT_COMPETITOR
+  - ADJACENT_COMPETITOR
+  - ENABLER
+  - RESEARCH_PRECEDENT
+  - CREATIVE_PRECEDENT
+  - POTENTIAL_PARTNER
+  - INSTITUTION
+  - COMMUNITY
+  - FUNDING_PATH
+  - WATCH_ONLY
+
+priorities:
+  P0: immediate_current_cycle
+  P1: high_value_after_current_proof
+  P2: medium_term_monitoring
+  P3: background_intelligence
+  N: excluded_from_current_phase
+
+targets:
+  - id: niantic-spatial
+    name: Niantic Spatial
+    relationship: [DIRECT_COMPETITOR, POTENTIAL_PARTNER, ENABLER]
+    priority: P0
+    url: "https://nianticspatial.com/"
+    applicability: "Spatial intelligence, localization, reconstruction, semantics, developer platform, and embodied-agent adjacency."
+    next_action: "Create a verified product/API capability matrix and map developer-partner entry points."
+    verification_status: OFFICIAL_SOURCE_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: peridot-beyond
+    name: Peridot / Peridot Beyond
+    relationship: [DIRECT_COMPETITOR, CREATIVE_PRECEDENT]
+    priority: P0
+    url: "https://playperidot.com/"
+    applicability: "Nearest visible precedent for a persistent AR creature that perceives and reacts to the world."
+    next_action: "Produce a feature-by-feature comparison covering sensing, persistence, agency, embodiment, social mechanics, and hardware dependency."
+    verification_status: CURRENT_PRODUCT_DETAILS_REQUIRE_RECHECK
+    last_verified: "2026-07-16"
+
+  - id: origin-wireless-adt
+    name: Origin Wireless / ADT
+    relationship: [ADJACENT_COMPETITOR, RESEARCH_PRECEDENT, MARKET_VALIDATION]
+    priority: P0
+    url: "https://www.originwirelessai.com/"
+    applicability: "Commercial validation of Wi-Fi sensing for motion, occupancy, security, and health."
+    next_action: "Extract deployment lessons, acquisition facts, product claims, privacy model, and hardware assumptions."
+    verification_status: OFFICIAL_AND_INDEPENDENT_SOURCES_FOUND
+    last_verified: "2026-07-16"
+
+  - id: espressif-esp-csi
+    name: Espressif ESP-CSI
+    relationship: [ENABLER, RESEARCH_PRECEDENT]
+    priority: P0
+    url: "https://github.com/espressif/esp-csi"
+    applicability: "Most practical first hardware CSI branch after EXP-0001; official ESP32 examples and tooling."
+    next_action: "Open a controlled evaluation issue; do not begin hardware implementation before the current causal proof is frozen."
+    verification_status: OFFICIAL_REPOSITORY_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: snap-developers
+    name: Snap Lens Studio / Camera Kit / Spectacles
+    relationship: [ENABLER, POTENTIAL_PARTNER, DISTRIBUTION_SURFACE]
+    priority: P0
+    url: "https://developers.snap.com/"
+    applicability: "Current embodiment platform and future native-host or wearable deployment surface."
+    next_action: "Complete EXP-0001, prepare a 45-60 second causal demo, then contact developer relations with one bounded technical question."
+    verification_status: OFFICIAL_SOURCE_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: ieee-80211bf
+    name: IEEE 802.11bf WLAN Sensing
+    relationship: [STANDARD, COMMUNITY, RESEARCH_PRECEDENT]
+    priority: P0
+    url: "https://www.ieee802.org/11/Reports/tgbf_update.htm"
+    applicability: "Terminology, measurement primitives, interoperability direction, and future device support for WLAN sensing."
+    next_action: "Track published amendments, implementation support, and terminology affecting claims and schemas."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: zkm-hertz-lab
+    name: ZKM Hertz-Lab
+    relationship: [INSTITUTION, POTENTIAL_PARTNER, VENUE]
+    priority: P0
+    url: "https://zkm.de/en/about-the-zkm/organization/hertzlab"
+    applicability: "Exceptionally close institutional fit across electromagnetic fields, sensors, AI, AR/VR, and artistic research."
+    next_action: "Prepare a one-page institutional fit brief and identify the correct curator/research contact."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: ars-electronica-futurelab
+    name: Ars Electronica Futurelab
+    relationship: [INSTITUTION, POTENTIAL_PARTNER, VENUE]
+    priority: P0
+    url: "https://ars.electronica.art/futurelab/en/"
+    applicability: "Research and exhibition ecosystem at the intersection of art, technology, society, and interactive systems."
+    next_action: "Prepare a one-page fit brief and map open calls, research collaborations, and presentation routes."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: epic-megagrants
+    name: Epic MegaGrants
+    relationship: [FUNDING_PATH]
+    priority: P0
+    url: "https://www.unrealengine.com/megagrants"
+    applicability: "Time-sensitive 2026 funding route for real-time 3D, immersive work, small teams, and open-source tooling."
+    next_action: "Make an explicit Y/N engine-fit decision and draft a proof-driven application only if Unreal alignment is genuine."
+    verification_status: OFFICIAL_2026_WINDOW_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: world-labs
+    name: World Labs
+    relationship: [ADJACENT_COMPETITOR, ENABLER]
+    priority: P1
+    url: "https://www.worldlabs.ai/"
+    applicability: "Defines major spatial-intelligence narrative around persistent generated and understood 3D worlds."
+    next_action: "Track APIs, exports, research disclosures, and differentiate measurable environmental causality from world generation."
+    verification_status: OFFICIAL_SOURCE_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: convai
+    name: Convai
+    relationship: [ADJACENT_COMPETITOR, ENABLER]
+    priority: P1
+    url: "https://convai.com/"
+    applicability: "Embodied conversational characters with perception, memory, actions, and game/XR integrations."
+    next_action: "Benchmark as a later cognition layer; prohibit insertion into the deterministic fast sensor loop."
+    verification_status: OFFICIAL_SOURCE_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: inworld
+    name: Inworld AI
+    relationship: [ADJACENT_COMPETITOR, ENABLER]
+    priority: P1
+    url: "https://inworld.ai/"
+    applicability: "Realtime voice and companion infrastructure for interactive media."
+    next_action: "Evaluate only after nonverbal embodiment and causal proof are stable; record latency and cost."
+    verification_status: OFFICIAL_SOURCE_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: nvidia-ace
+    name: NVIDIA ACE for Games
+    relationship: [ADJACENT_COMPETITOR, ENABLER]
+    priority: P1
+    url: "https://developer.nvidia.com/ace-for-games"
+    applicability: "On-device and cloud speech, intelligence, animation, and autonomous game-character stack."
+    next_action: "Track local inference and animation capabilities for future native builds."
+    verification_status: OFFICIAL_SOURCE_VERIFIED
+    last_verified: "2026-07-16"
+
+  - id: mit-signal-kinetics
+    name: MIT Signal Kinetics
+    relationship: [INSTITUTION, RESEARCH_PRECEDENT, POTENTIAL_PARTNER]
+    priority: P1
+    url: "https://www.media.mit.edu/groups/signal-kinetics/overview/"
+    applicability: "Leading wireless sensing, RF perception, networking, and environmental systems research."
+    next_action: "Build a literature and lab-capability brief before any contact; approach with a reproducible artifact and one bounded question."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: ucsd-wcsng
+    name: UC San Diego Wireless Communication Sensing and Networking Group
+    relationship: [INSTITUTION, RESEARCH_PRECEDENT, POTENTIAL_PARTNER]
+    priority: P1
+    url: "https://wcsng.ucsd.edu/"
+    applicability: "Wi-Fi sensing, localization, robotics integration, and WiROS."
+    next_action: "Map current faculty, projects, datasets, and collaboration routes."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: architecture-of-radio
+    name: Architecture of Radio
+    relationship: [CREATIVE_PRECEDENT]
+    priority: P1
+    url: "https://www.architectureofradio.com/"
+    applicability: "Canonical artistic precedent for making invisible communications infrastructure spatially visible."
+    next_action: "Document similarities and differences to prevent weak originality claims and sharpen the creature-based distinction."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: rafael-lozano-hemmer
+    name: Rafael Lozano-Hemmer / Pulse Room
+    relationship: [CREATIVE_PRECEDENT]
+    priority: P1
+    url: "https://www.lozano-hemmer.com/pulse_room.php"
+    applicability: "Strong precedent for live signal, embodiment, participation, persistence, and relational architecture."
+    next_action: "Extract interaction and evidence-design lessons without copying surface aesthetics."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: wifi-broadband-alliance
+    name: Wireless Broadband Alliance Wi-Fi Sensing
+    relationship: [STANDARD_COMMUNITY, INDUSTRY_NETWORK]
+    priority: P1
+    url: "https://wballiance.com/"
+    applicability: "Industry testing, deployment, business framing, and ecosystem coordination for Wi-Fi sensing."
+    next_action: "Locate active working groups, white papers, member companies, and public events."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: siggraph
+    name: ACM SIGGRAPH Art Gallery and Emerging Technologies
+    relationship: [COMMUNITY, VENUE, VALIDATION_PATH]
+    priority: P1
+    url: "https://www.siggraph.org/"
+    applicability: "High-credibility technical-art presentation route for embodied sensing and graphics."
+    next_action: "Track next call, required maturity, format, and submission deadlines."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: acm-tei
+    name: ACM Tangible, Embedded, and Embodied Interaction
+    relationship: [COMMUNITY, VENUE, RESEARCH_PATH]
+    priority: P1
+    url: "https://tei.acm.org/"
+    applicability: "Strong conceptual and publication fit for sensor-to-embodiment systems."
+    next_action: "Track calls and identify the appropriate paper, demo, or art track after EXP-0001."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: niantic-partner-program
+    name: Niantic Spatial Developer Partner Program
+    relationship: [POTENTIAL_PARTNER, DISTRIBUTION_PATH]
+    priority: P1
+    url: "https://nianticspatial.com/"
+    applicability: "Potential platform access, co-development, and visibility."
+    next_action: "Verify current application path and requirements after proof video exists."
+    verification_status: PROGRAM_DETAILS_REQUIRE_RECHECK
+    last_verified: "2026-07-16"
+
+  - id: unity-for-humanity
+    name: Unity for Humanity
+    relationship: [FUNDING_PATH]
+    priority: P2
+    url: "https://unity.com/humanity"
+    applicability: "Impact-oriented real-time 3D grant and mentorship route."
+    next_action: "Develop a genuine social-impact branch; verify 2027 reopening and entity/fiscal-sponsor rules."
+    verification_status: OFFICIAL_FUTURE_WINDOW_FOUND
+    last_verified: "2026-07-16"
+
+  - id: openxr
+    name: Khronos OpenXR
+    relationship: [STANDARD, ENABLER]
+    priority: P1
+    url: "https://www.khronos.org/openxr/"
+    applicability: "Cross-platform XR runtime portability beyond a single vendor."
+    next_action: "Preserve future interfaces so embodiment logic can migrate without rewriting the observation layer."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: openusd
+    name: Alliance for OpenUSD
+    relationship: [STANDARD, ENABLER]
+    priority: P2
+    url: "https://aousd.org/"
+    applicability: "Long-term scene composition and persistent-world interchange."
+    next_action: "Monitor only; no current implementation dependency."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: touchdesigner
+    name: TouchDesigner
+    relationship: [ENABLER, COMMUNITY]
+    priority: P1
+    url: "https://derivative.ca/"
+    applicability: "Rapid sensor-to-visual prototyping and installation-grade real-time media."
+    next_action: "Evaluate as a parallel exhibition/prototyping surface after the Lens proof, not a replacement for the canonical pipeline."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+  - id: marsmallow-laser-feast
+    name: Marshmallow Laser Feast
+    relationship: [CREATIVE_PRECEDENT, POTENTIAL_PARTNER]
+    priority: P2
+    url: "https://www.marshmallowlaserfeast.com/"
+    applicability: "Embodied, ecological, and invisible-system experiences with strong institutional reach."
+    next_action: "Study project formats, partners, and commissioning routes."
+    verification_status: OFFICIAL_SOURCE_FOUND
+    last_verified: "2026-07-16"
+
+excluded_or_deferred:
+  - id: llm-in-fast-loop
+    decision: N
+    reason: "Non-deterministic conversational models must not mediate the current sub-second sensing-to-motion loop."
+  - id: premature-cloud-bus
+    decision: N
+    reason: "Pub/Sub, worker pools, and global state are not justified by the current single-producer proof."
+  - id: broad-first-ever-claim
+    decision: N
+    reason: "Requires patent, academic, product, and art prior-art searches beyond this first scan."
+  - id: engine-migration-for-grant-only
+    decision: N
+    reason: "A grant does not justify artificial migration without product and technical fit."
