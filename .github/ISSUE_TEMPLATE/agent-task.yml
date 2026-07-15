@@ -1,0 +1,87 @@
+name: LEGION agent task
+description: Create a bounded task for a human or agentic contributor
+title: "[LEGION-0000] "
+labels: []
+body:
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Requested decision
+      options:
+        - "Y — admit to execution"
+        - "N — block/defer"
+        - "Research only — no critical-path authority"
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Primary role
+      options:
+        - legion-orchestrator
+        - truth-warden
+        - systems-architect
+        - sensor-engineer
+        - determinism-engineer
+        - embodiment-engineer
+        - validation-engineer
+        - security-reviewer
+        - commercial-operator
+        - documentation-curator
+        - red-team-reviewer
+        - release-warden
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Observable objective
+      description: One result that can be inspected or measured.
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Exact inputs
+      description: Files, commits, artifacts, links, schemas, or devices.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and forbidden actions
+      description: Truth, safety, cost, time, platform, and file-ownership boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Binary acceptance criteria
+      description: Conditions that produce PASS or FAIL.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence to preserve
+      description: Raw input, output, logs, recording, manifest, hashes, test report.
+    validations:
+      required: true
+  - type: dropdown
+    id: claims
+    attributes:
+      label: Claims impact
+      options:
+        - NONE
+        - NARROWS existing claims
+        - STRENGTHENS claims with new evidence
+        - REQUIRES claims review before merge
+    validations:
+      required: true
+  - type: textarea
+    id: handoff
+    attributes:
+      label: Reviewer and handoff
+      description: Independent reviewer plus the next role and required context.
+    validations:
+      required: true
