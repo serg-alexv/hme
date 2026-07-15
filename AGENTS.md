@@ -7,7 +7,9 @@ LEGION is a coordinated swarm, not a pile of simultaneous prompts. Each agent re
 ## Chain of command
 
 ```text
-FOUNDER / PRINCIPAL ARCHITECT
+PROJECT OWNER / EXECUTIVE PRINCIPAL — Leo Shaposhnikov
+        ↓
+FOUNDING CTO / ORIGINAL TECHNICAL ORIGINATOR — Mika / serg-alexv
         ↓
 SUPERVISOR / MAINTAINER
         ↓
@@ -16,7 +18,9 @@ PLANNER → IMPLEMENTERS → TESTERS → REVIEWERS
 EVIDENCE CURATOR → RELEASE GATE
 ```
 
-The founder may override any agent decision. The supervisor protects system boundaries, evidence quality, and repository coherence.
+Leo may override organizational, financial, legal, representation, or strategic decisions. Mika governs technical decomposition, architecture, implementation, and technical acceptance within delegated scope. The supervisor protects system boundaries, evidence quality, and repository coherence.
+
+No agent may infer that GitHub account ownership, commit authorship, or technical authorship equals project ownership.
 
 ## Core roles
 
@@ -30,7 +34,7 @@ Maintains `CLAIMS.md`, provenance vocabulary, evidence classes, and forbidden ov
 
 ### 3. `systems-architect`
 
-Maintains interfaces, component boundaries, ADRs, failure modes, and activation gates.
+Maintains interfaces, component boundaries, ADRs, failure modes, and activation gates under the Founding CTO’s technical direction.
 
 ### 4. `sensor-engineer`
 
@@ -54,7 +58,7 @@ Reviews secrets, authentication, external integrations, data exposure, unsafe de
 
 ### 9. `commercial-operator`
 
-Translates verified capabilities into bounded offers, pilots, sponsor packages, and measurable deliverables. May not enlarge technical claims.
+Translates verified capabilities into bounded offers, pilots, sponsor packages, and measurable deliverables. May not enlarge technical claims or make commitments without the required executive authority.
 
 ### 10. `documentation-curator`
 
@@ -66,7 +70,7 @@ Attempts to falsify assumptions, reproduce failures, locate unsupported claims, 
 
 ### 12. `release-warden`
 
-Checks required files, tests, status changes, evidence, checksums, and rollback before release.
+Checks required files, tests, status changes, evidence, checksums, authority, and rollback before release.
 
 ## Task contract
 
@@ -88,8 +92,9 @@ acceptance:
   - binary pass/fail criteria
 forbidden:
   - actions outside scope
-reviewer: independent role or founder
+reviewer: independent role, CTO, or owner as required
 handoff: next role and required context
+authority_class: A | B | C | D
 ```
 
 ## Handoff protocol
@@ -102,7 +107,8 @@ Every handoff contains:
 4. commands/tests run;
 5. artifacts and hashes;
 6. risks and open questions;
-7. exact next action.
+7. exact next action;
+8. authority still required.
 
 ## Concurrency rules
 
@@ -117,8 +123,10 @@ Agents must not:
 - hide missing raw data behind a checksum;
 - treat a vendor product as a requirement without a demonstrated need;
 - introduce cloud infrastructure before an activation gate;
-- rewrite founder authorship;
-- merge narrative framing into scientific evidence.
+- rewrite Leo’s project ownership or Mika’s original technical authorship;
+- confuse repository hosting with ownership;
+- merge narrative framing into scientific evidence;
+- encode insults, diagnoses, or personal self-descriptions as role definitions.
 
 ## Definition of done
 
@@ -130,6 +138,7 @@ output exists
 + evidence is linked
 + status is updated
 + claims remain valid
++ required authority is recorded
 + next handoff is explicit
 ```
 
