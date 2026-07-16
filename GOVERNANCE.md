@@ -90,7 +90,15 @@ Requires the appropriate authority from the matrix above and written Y/N closure
 
 Requires Leo’s approval; legal or financial review may also be required. Mika’s technical assessment is required when the commitment depends on system capability or delivery feasibility.
 
-## 8. Pull-request policy
+## 8. External publishing rule
+
+AI-assisted or agent-produced material may be developed and versioned inside the repository, but it may not be published to an external scholarly, archival, institutional, commercial, partner, grant, media, or public-distribution resource until Mika has directly revised or explicitly accepted the exact publication candidate.
+
+External publication then requires the applicable authority under the matrix above. In particular, Leo retains approval over Class D consequences such as external representation, licensing, legal commitments, strategic releases, investor promises, and material expenditure.
+
+The authoritative procedure is defined in [`docs/PUBLISHING.md`](docs/PUBLISHING.md). Approval attaches only to the exact reviewed version and destination; material changes reopen review.
+
+## 9. Pull-request policy
 
 Every PR must state:
 
@@ -106,7 +114,7 @@ Every PR must state:
 
 No agent may merge its own material Class C or D change without independent review.
 
-## 9. Agent accountability
+## 10. Agent accountability
 
 Agents are treated as fallible contractors, not authorities. Every agent output must preserve:
 
@@ -118,15 +126,16 @@ Agents are treated as fallible contractors, not authorities. Every agent output 
 - unverified claims;
 - next handoff.
 
-Fabricated execution, fabricated citations, concealed uncertainty, or silent ownership reassignment is a blocking defect.
+Fabricated execution, fabricated citations, concealed uncertainty, silent ownership reassignment, or unauthorized external publication is a blocking defect.
 
-## 10. Repository continuity
+## 11. Repository continuity
 
 The repository—not any individual chat—is the durable operational memory. Critical decisions must be committed to:
 
 - `OWNERSHIP.md`
 - `STATUS.md`
 - `CLAIMS.md`
+- `docs/PUBLISHING.md`
 - `decisions/`
 - `experiments/`
 - `docs/ROADMAP.md`
