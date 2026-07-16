@@ -2,7 +2,7 @@
 
 This directory contains the versioned review manuscript for the World 2.0 / LEGION program.
 
-## Current publication
+## Current repository publication
 
 - [`world2-review-v0.1.md`](./world2-review-v0.1.md) — historical memorandum, introduction, current actual system description, and expandable full-paper contents.
 
@@ -14,7 +14,13 @@ This directory contains the versioned review manuscript for the World 2.0 / LEGI
 
 ## Document class
 
-Version 0.1 is a public working review manuscript, not a peer-reviewed article. It was published without a separate pre-publication verification round at the author's instruction. Implementation claims remain bounded by `STATUS.md`, `CLAIMS.md`, `OWNERSHIP.md`, and preserved experiment evidence.
+Version 0.1 is a repository-hosted public working review manuscript, not a peer-reviewed article, DOI deposit, preprint-server publication, journal submission, or approved external institutional release. It was committed without a separate pre-commit verification round at the author's instruction. Implementation claims remain bounded by `STATUS.md`, `CLAIMS.md`, `OWNERSHIP.md`, and preserved experiment evidence.
+
+## External publication gate
+
+Before this manuscript or any derivative is published through an external resource, Mika must directly revise or explicitly accept the exact publication candidate. The applicable executive, legal, licensing, and external-representation approvals must then be recorded under `GOVERNANCE.md` and [`docs/PUBLISHING.md`](../PUBLISHING.md).
+
+External publication approval does not transfer automatically between versions, destinations, formats, licenses, abstracts, figures, or metadata.
 
 ## Revision rules
 
@@ -25,6 +31,7 @@ Version 0.1 is a public working review manuscript, not a peer-reviewed article. 
 5. Product status, funding, standards, and institutional information require a dated source.
 6. World 2.0 implementation claims may not exceed the current LEGION evidence class.
 7. Patent and novelty conclusions remain blocked until the dedicated prior-art layer is completed.
+8. No agent or team member may externally publish the manuscript without the human revision and authority sequence defined in `docs/PUBLISHING.md`.
 
 ## Planned build order
 
